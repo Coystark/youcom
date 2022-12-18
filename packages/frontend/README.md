@@ -24,6 +24,6 @@ And then run the start script:
 yarn start
 ```
 
-Maybe you need to change the port, [https://onecompiler.com/posts/3w5u9patd/how-to-change-port-in-next-js-app](see this article.)
+[https://onecompiler.com/posts/3w5u9patd/how-to-change-port-in-next-js-app](Maybe you need to change the port)
 
 Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
