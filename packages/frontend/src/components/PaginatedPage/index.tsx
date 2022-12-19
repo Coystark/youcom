@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, SimpleGrid } from "@chakra-ui/react";
+import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
 import { Pagination } from "components/Pagination";
 import { ProductCard } from "components/ProductCard";
 import Head from "next/head";
@@ -43,7 +43,8 @@ export const PaginatedPage: React.FC<Props> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxW="container.xl" p={4}>
+      <Container maxW="container.xl" p={4} pt={14}>
+        <Heading>Página {currentPage}</Heading>
         <Pagination
           onClick={(page) => router.push(`/${page}`)}
           currentPage={currentPage}

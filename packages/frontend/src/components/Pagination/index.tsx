@@ -29,7 +29,7 @@ export const Pagination: React.FC<IPaginationProps> = ({
 
         return (
           <Button
-            size="sm"
+            size="lg"
             key={pageNumber}
             onClick={() => onClick(pageNumber)}
             variant={pageNumber === currentPage ? "solid" : "ghost"}

@@ -29,14 +29,14 @@ export const ProductCard: React.FC<IProductCardProps> = memo(
   ({ product, hydrated, priority, favorite }) => {
     const toggleFavorite = useProductStore((state) => state.toggleFavorite);
 
-    const discountPrice = new Intl.NumberFormat(undefined, {
+    const discountPrice = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
     }).format(
       product.price - (product.price * product.discountPercentage) / 100
     );
 
-    const price = new Intl.NumberFormat(undefined, {
+    const price = new Intl.NumberFormat("pt-BR", {
       style: "currency",
       currency: "BRL",
     }).format(product.price);
@@ -81,8 +81,8 @@ export const ProductCard: React.FC<IProductCardProps> = memo(
             </HStack>
           </Stack>
         </CardBody>
-        <Divider />
-        <CardFooter justify="center">
+        <Divider borderColor="gray.200" />
+        <CardFooter justify="center" minH="20">
           <ButtonGroup spacing="2">
             {hydrated ? (
               <Button
